@@ -11,10 +11,10 @@ build:
 commands:
 - echo build Docker image on `date`
 - cd src
-- docker build -t g2-cap2-ecr .
-- docker tag g2-cap2-ecr:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/g2-cap2-ecr:latest
+- docker build -t group2cap2 .
+- docker tag group2cap2:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2cap2:latest
 post_build:
 commands:
 - echo build Docker image complete `date`
 - echo push latest Docker images to ECR...
-- docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/g2-cap2-ecr:latest
+- docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2cap2:latest
