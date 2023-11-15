@@ -17,3 +17,7 @@ phases:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
       - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2cap2:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"g2-cap2-cluster", "imageUri":"<g2-cap2-ecr>:latest"}]' > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
